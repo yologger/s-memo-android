@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">S Memo</string>
+
+    <string name="activity_main_bottom_navigation_view_home">Home</string>
+    <string name="activity_main_bottom_navigation_view_settings">Settings</string>
 </resources>

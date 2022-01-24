@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/activity_main_menu_bottom_navigation_view_item_home"
+        android:icon="@drawable/selector_home_black_24"
+        app:showAsAction="ifRoom"
+        android:title="@string/activity_main_bottom_navigation_view_home"/>
+    <item
+        android:id="@+id/activity_main_menu_bottom_navigation_view_item_settings"
+        android:icon="@drawable/selector_settings_black_24"
+        app:showAsAction="ifRoom"
+        android:title="@string/activity_main_bottom_navigation_view_settings" />
+</menu>

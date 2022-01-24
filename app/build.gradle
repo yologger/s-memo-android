@@ -33,11 +33,11 @@ android {
 
 dependencies {
 
-    // KTX Core
-    implementation "androidx.core:core-ktx:${core_ktx_version}"
-
     // Material
     implementation "com.google.android.material:material:${material_version}"
+
+    // KTX Core
+    implementation "androidx.core:core-ktx:${core_ktx_version}"
 
     // AppCompat
     implementation "androidx.appcompat:appcompat:${app_compat_version}"

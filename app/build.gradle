@@ -3,6 +3,9 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdk 31
 
@@ -78,6 +81,19 @@ dependencies {
     // AndroidX Test Espresso
     androidTestImplementation "androidx.test.espresso:espresso-core:${androidx_test_expresso}"
 
+    // Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutine_version}"
+
     // Logger
     implementation "com.orhanobut:logger:${logger_version}"
+
+    // Room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // Room KTX
+    implementation "androidx.room:room-ktx:2.4.1"
+
+    // Room Test
+    androidTestImplementation "androidx.room:room-testing:$room_version"
 }

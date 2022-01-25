@@ -10,6 +10,7 @@ import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
 
 import com.orhanobut.logger.FormatStrategy
+import org.koin.core.logger.Level
 
 
 class App : Application() {
@@ -21,7 +22,7 @@ class App : Application() {
 
     private fun setupKoin() {
         startKoin {
-            androidLogger()
+            androidLogger(if (BuildConfig.DEBUG) Level.ERROR else Level.NONE)
             androidContext(this@App)
             modules(
                 listOf(

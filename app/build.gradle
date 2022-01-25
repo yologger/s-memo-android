@@ -77,4 +77,7 @@ dependencies {
 
     // AndroidX Test Espresso
     androidTestImplementation "androidx.test.espresso:espresso-core:${androidx_test_expresso}"
+
+    // Logger
+    implementation "com.orhanobut:logger:${logger_version}"
 }

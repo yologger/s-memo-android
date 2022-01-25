@@ -12,6 +12,7 @@ buildscript {
         koin_version= "3.1.5"
         rxjava_version = "3.0.0"
         speed_dial_version = "3.1.1"
+        logger_version = "2.2.0"
     }
     repositories {
         google()

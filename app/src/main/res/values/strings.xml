@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">S Memo</string>
 
+    <!-- activity_main -->
     <string name="activity_main_bottom_navigation_view_home">Home</string>
     <string name="activity_main_bottom_navigation_view_settings">Settings</string>
+
+    <!-- fragment_home -->
+    <string name="fragment_home_sdv_delete">DELETE</string>
+    <string name="fragment_home_sdv_reorder">REORDER</string>
+    <string name="fragment_home_sdv_new_post">NEW POST</string>
+
 </resources>

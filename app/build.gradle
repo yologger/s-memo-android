@@ -11,7 +11,7 @@ android {
         minSdk 21
         targetSdk 31
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -48,15 +48,6 @@ dependencies {
     // Legacy Support v4
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    // JUnit
-    testImplementation "junit:junit:${junit_version}"
-
-    // AndroidX Test Junit
-    androidTestImplementation "androidx.test.ext:junit:${androidx_test_junit}"
-
-    // AndroidX Test Espresso
-    androidTestImplementation "androidx.test.espresso:espresso-core:${androidx_test_expresso}"
-
     // Koin Core features
     implementation "io.insert-koin:koin-core:$koin_version"
 
@@ -68,4 +59,22 @@ dependencies {
 
     // Koin main features for Android
     implementation "io.insert-koin:koin-android:$koin_version"
+
+    // RxJava
+    implementation "io.reactivex.rxjava3:rxjava:${rxjava_version}"
+
+    // RxAndroid
+    implementation "io.reactivex.rxjava3:rxandroid:${rxjava_version}"
+
+    // Speed Dial
+    implementation "com.leinardi.android:speed-dial:${speed_dial_version}"
+
+    // JUnit
+    testImplementation "junit:junit:${junit_version}"
+
+    // AndroidX Test Junit
+    androidTestImplementation "androidx.test.ext:junit:${androidx_test_junit}"
+
+    // AndroidX Test Espresso
+    androidTestImplementation "androidx.test.espresso:espresso-core:${androidx_test_expresso}"
 }

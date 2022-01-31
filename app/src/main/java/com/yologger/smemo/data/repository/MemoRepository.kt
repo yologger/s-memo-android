@@ -9,4 +9,8 @@ class MemoRepository (
     suspend fun createMemo(memoDto: MemoDto): Long {
         return memoDao.insert(memoDto.toEntity())
     }
+
+    suspend fun getAllMemos(): List<MemoDto> {
+        return memoDao.getAll().map { MemoDto(it.title, it.content) }
+    }
 }

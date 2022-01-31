@@ -46,7 +46,7 @@ class CreateViewModelTest {
 
     @Test
     @ExperimentalCoroutinesApi
-    fun test_invalidInputs()  {
+    fun whenInvalidInputs()  {
         // Given
         val createViewModel = CreateViewModel(fakeMemoRepository, TestCoroutineDispatcher())
         createViewModel.liveTitle.value = ""
@@ -61,9 +61,8 @@ class CreateViewModelTest {
 
     @Test
     @ExperimentalCoroutinesApi
-    fun test_validInputs() = runBlockingTest {
+    fun whenValidInputs() = runBlockingTest {
         // Given
-
         `when`(fakeMemoRepository.createMemo(MockitoHelper.anyObject())).thenReturn(1)
 
         val createViewModel = CreateViewModel(fakeMemoRepository, TestCoroutineDispatcher())

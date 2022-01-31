@@ -15,4 +15,9 @@
         android:layout_gravity="bottom|end"
         app:sdMainFabClosedSrc="@drawable/icon_add_filled_black_24" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_home_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

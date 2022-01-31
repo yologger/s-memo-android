@@ -10,4 +10,7 @@
     <string name="fragment_home_sdv_reorder">REORDER</string>
     <string name="fragment_home_sdv_new_post">NEW POST</string>
 
+    <!-- activity_create -->
+    <string name="activity_create_tb_save">SAVE</string>
+
 </resources>

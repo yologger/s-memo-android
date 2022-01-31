@@ -1,4 +1,4 @@
-package com.yologger.smemo.presentation.screen.main.home
+package com.yologger.smemo.ui.screen.main.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import com.leinardi.android.speeddial.SpeedDialActionItem
 import com.leinardi.android.speeddial.SpeedDialView
 import com.yologger.smemo.R
-import com.yologger.smemo.presentation.screen.create.CreateActivity
+import com.yologger.smemo.ui.screen.create.CreateActivity
 
 class HomeFragment : Fragment() {
 

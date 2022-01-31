@@ -1,4 +1,4 @@
-package com.yologger.smemo.presentation.screen.main
+package com.yologger.smemo.ui.screen.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.widget.FrameLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.yologger.smemo.R
-import com.yologger.smemo.presentation.screen.main.home.HomeFragment
-import com.yologger.smemo.presentation.screen.main.settings.SettingsFragment
+import com.yologger.smemo.ui.screen.main.home.HomeFragment
+import com.yologger.smemo.ui.screen.main.settings.SettingsFragment
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener, NavigationBarView.OnItemReselectedListener {
 

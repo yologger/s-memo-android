@@ -1,7 +1,6 @@
 package com.yologger.smemo
 
 import android.app.Application
-import com.yologger.smemo.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -10,6 +9,7 @@ import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
 
 import com.orhanobut.logger.FormatStrategy
+import com.yologger.smemo.di.*
 import org.koin.core.logger.Level
 
 
@@ -26,7 +26,11 @@ class App : Application() {
             androidContext(this@App)
             modules(
                 listOf(
-                    appModule
+                    appModule,
+                    viewModelModule,
+                    coroutineDispatcherModule,
+                    repositoryModule,
+                    databaseModule
                 )
             )
         }

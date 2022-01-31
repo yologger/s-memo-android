@@ -9,4 +9,7 @@
     <string name="fragment_home_sdv_delete">삭제</string>
     <string name="fragment_home_sdv_reorder">정렬</string>
     <string name="fragment_home_sdv_new_post">글쓰기</string>
+
+    <!-- activity_create -->
+    <string name="activity_create_tb_save">저장</string>
 </resources>

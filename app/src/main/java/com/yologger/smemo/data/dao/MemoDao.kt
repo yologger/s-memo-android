@@ -20,4 +20,7 @@ interface MemoDao {
 
     @Update
     suspend fun update(memoEntity: MemoEntity): Int
+
+    @Delete
+    suspend fun delete(memoEntity: MemoEntity): Int
 }

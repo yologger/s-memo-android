@@ -26,4 +26,6 @@ class MemoRepository (
         memoDao.update(memoDto.toEntity())
         return memoDao.getById(memoDto.id).toDto()
     }
+
+    suspend fun deleteMemo(memoDto: MemoDto): Int = memoDao.delete(memoDto.toEntity())
 }

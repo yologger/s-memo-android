@@ -87,6 +87,24 @@ class MemoDaoTest {
         assertThat(target.content).isEqualTo("content2")
     }
 
+    @Test
+    fun delete() = runBlocking {
+        // Given
+        val dummy = MemoEntity(id = 1, title = "title1", content = "content1")
+
+        dao.insert(MemoEntity(id = 1, title = "title1", content = "content1"))
+        dao.insert(MemoEntity(id = 2, title = "title2", content = "content2"))
+        dao.insert(MemoEntity(id = 3, title = "title3", content = "content3"))
+
+        // When
+        val deletedCount = dao.delete(memoEntity = dummy)
+
+        // Then
+        assertThat(deletedCount).isEqualTo(1)
+        val total = dao.getAll()
+        assertThat(total.size).isEqualTo(2)
+    }
+
     @After
     fun tearDown() {
         db.close()

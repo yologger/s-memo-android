@@ -89,7 +89,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        recyclerViewAdapter = MemosAdapter(listener = onItemClick)
+        recyclerViewAdapter = MemosAdapter(context = requireContext(), onItemClickListener = onItemClick, onItemRemoveListener = {
+            viewModel.deleteMemo(it)
+        })
         recyclerView.adapter = recyclerViewAdapter
         val layoutManager = LinearLayoutManager(requireActivity())
         layoutManager.orientation = LinearLayoutManager.VERTICAL
@@ -100,12 +102,10 @@ class HomeFragment : Fragment() {
         viewModel.liveMemos.observe(viewLifecycleOwner) {
             recyclerViewAdapter.updateAll(it)
         }
-
         viewModel.event.observe(viewLifecycleOwner) {
             when (it) {
-                is HomeViewModel.Event.MEMO_ADDED -> {
-                    recyclerViewAdapter.addLast(it.memoDto)
-                }
+                is HomeViewModel.Event.MEMO_ADDED -> recyclerViewAdapter.addLast(it.memoDto)
+                is HomeViewModel.Event.MEMO_DELETED -> recyclerViewAdapter.deleteAt(it.index)
             }
         }
     }

@@ -9,6 +9,7 @@ import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
 
 import com.orhanobut.logger.FormatStrategy
+import com.yologger.smemo.common.ThemeManager
 import com.yologger.smemo.di.*
 import org.koin.core.logger.Level
 
@@ -17,6 +18,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         setupKoin()
+        setupTheme()
         setupLogger()
     }
 
@@ -33,6 +35,15 @@ class App : Application() {
                     databaseModule
                 )
             )
+        }
+    }
+
+    private fun setupTheme() {
+        val currentTheme = ThemeManager.getCurrentTheme(context = applicationContext)
+        when (currentTheme) {
+            ThemeManager.ThemeMode.DARK -> { ThemeManager.applyTheme(applicationContext, ThemeManager.ThemeMode.DARK) }
+            ThemeManager.ThemeMode.LIGHT -> { ThemeManager.applyTheme(applicationContext, ThemeManager.ThemeMode.LIGHT) }
+            ThemeManager.ThemeMode.DEFAULT -> { ThemeManager.applyTheme(applicationContext, ThemeManager.ThemeMode.DEFAULT) }
         }
     }
 

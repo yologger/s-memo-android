@@ -18,7 +18,9 @@
             android:id="@+id/activity_detail_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="?attr/actionBarSize" />
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
 
         <EditText
             android:id="@+id/activity_detail_tv_title"

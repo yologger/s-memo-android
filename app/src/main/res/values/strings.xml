@@ -13,4 +13,9 @@
     <!-- activity_create -->
     <string name="activity_create_tb_save">SAVE</string>
 
+    <!-- activity_setting -->
+    <string name="fragment_setting_tv_theme">Dark Theme</string>
+    <string name="fragment_setting_feature1">New Features</string>
+    <string name="fragment_setting_feature2">Coming Soon.</string>
+
 </resources>

@@ -58,17 +58,12 @@ class HomeFragment : Fragment() {
 
     private fun setupSpeedDialView() {
         speedDialView.addActionItem(SpeedDialActionItem.Builder(R.id.fragment_home_sdv_add, R.drawable.icon_create_filled_black_24).setLabel(getString(R.string.fragment_home_sdv_new_post)).create())
-        speedDialView.addActionItem(SpeedDialActionItem.Builder(R.id.fragment_home_sdv_edit, R.drawable.icon_reorder_filled_black_24).setLabel(getString(R.string.fragment_home_sdv_reorder)).create())
         speedDialView.addActionItem(SpeedDialActionItem.Builder(R.id.fragment_home_sdv_delete, R.drawable.icon_delete_filled_black_24).setLabel(getString(R.string.fragment_home_sdv_delete)).create())
         speedDialView.setOnActionSelectedListener(SpeedDialView.OnActionSelectedListener {
             when (it.id) {
                 R.id.fragment_home_sdv_add -> {
                     val nextIntent = Intent(requireActivity(), CreateActivity::class.java)
                     startCreateActivityForResult.launch(nextIntent)
-                    speedDialView.close()
-                    return@OnActionSelectedListener true
-                }
-                R.id.fragment_home_sdv_edit -> {
                     speedDialView.close()
                     return@OnActionSelectedListener true
                 }

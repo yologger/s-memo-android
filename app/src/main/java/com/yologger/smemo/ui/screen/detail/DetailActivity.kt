@@ -1,4 +1,4 @@
-package com.yologger.smemo.ui.screen.create
+package com.yologger.smemo.ui.screen.detail
 
 import android.app.Activity
 import android.content.Intent
@@ -6,14 +6,15 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import com.yologger.smemo.R
-import com.yologger.smemo.databinding.ActivityCreateBinding
+import com.yologger.smemo.databinding.ActivityDetailBinding
+import com.yologger.smemo.ui.dto.MemoDto
 import com.yologger.smemo.ui.screen.base.BaseActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class CreateActivity : BaseActivity() {
+class DetailActivity : BaseActivity() {
 
-    private val viewModel: CreateViewModel by viewModel()
-    private lateinit var binding: ActivityCreateBinding
+    private val viewModel: DetailViewModel by viewModel()
+    private lateinit var binding: ActivityDetailBinding
     private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,17 +24,19 @@ class CreateActivity : BaseActivity() {
     }
 
     private fun initBinding() {
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_create)
+        val memoDto = intent.getSerializableExtra("selected_memo") as MemoDto
+        viewModel.setLiveData(memoDto)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_detail)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
         viewModel.event.observe(this) {
             when(it) {
-                is CreateViewModel.Event.INPUTS_EMPTY_ERROR -> showToast("Inputs can't be empty.")
-                is CreateViewModel.Event.ON_MEMO_SAVED -> {
-                    showToast("Memo added.")
+                is DetailViewModel.Event.INPUTS_EMPTY_ERROR -> showToast("Inputs can't be empty.")
+                is DetailViewModel.Event.ON_MEMO_UPDATED -> {
+                    showToast("Updated.")
                     val intent = Intent()
-                    intent.putExtra("id", it.id)
+                    intent.putExtra("updated_memo", it.memoDto)
                     setResult(Activity.RESULT_OK, intent)
                     finish()
                 }
@@ -42,14 +45,15 @@ class CreateActivity : BaseActivity() {
     }
 
     private fun initToolbar() {
-        toolbar = findViewById(R.id.activity_create_tb)
+        toolbar = findViewById(R.id.activity_detail_tb)
         toolbar.setNavigationIcon(R.drawable.icon_close_filled_black_24)
+
         toolbar.setNavigationOnClickListener { finish() }
-        toolbar.inflateMenu(R.menu.activity_create_menu_toolbar)
+        toolbar.inflateMenu(R.menu.activity_detail_menu_toolbar)
         toolbar.setOnMenuItemClickListener {
             when (it?.itemId) {
-                R.id.activity_create_tb_save -> { viewModel.onSave() }
-                else -> { finish() }
+                R.id.activity_detail_tb_save -> viewModel.onSave()
+                else -> finish()
             }
             true
         }

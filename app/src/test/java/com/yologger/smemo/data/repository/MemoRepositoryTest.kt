@@ -10,6 +10,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.ArgumentMatchers.anyLong
 import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.Mockito.`when`
@@ -80,5 +81,20 @@ class MemoRepositoryTest {
         // Then
         assertThat(result.title).isEqualTo(dummyTitle)
         assertThat(result.content).isEqualTo(dummyContent)
+    }
+
+    @Test
+    fun updateMemo() = runBlocking {
+        // Given
+        `when`(mockMemoDao.update(MockitoHelper.anyObject())).thenReturn(1)
+        `when`(mockMemoDao.getById(anyLong())).thenReturn(MemoEntity(1, "title2", "content2"))
+        val memoDto = MemoDto(1, "title1", "content1")
+
+        // When
+        val result = memoRepository.updateMemo(memoDto)
+
+        // Then
+        assertThat(result.title).isEqualTo("title2")
+        assertThat(result.content).isEqualTo("content2")
     }
 }

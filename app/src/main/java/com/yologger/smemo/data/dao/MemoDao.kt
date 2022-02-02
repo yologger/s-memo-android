@@ -17,4 +17,7 @@ interface MemoDao {
 
     @Query("DELETE FROM MemoEntity")
     suspend fun deleteAll()
+
+    @Update
+    suspend fun update(memoEntity: MemoEntity): Int
 }

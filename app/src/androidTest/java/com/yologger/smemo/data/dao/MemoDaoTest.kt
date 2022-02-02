@@ -70,6 +70,23 @@ class MemoDaoTest {
         assertThat(memoList.size).isEqualTo(0)
     }
 
+    @Test
+    fun update() = runBlocking {
+        // Given
+        val dummyId = 1L
+        dao.insert(MemoEntity(id = dummyId, title = "title1", content = "content1"))
+
+        // When
+        val dummyMemo = MemoEntity(id = dummyId, title = "title2", content = "content2")
+        val count = dao.update(dummyMemo)
+
+        // Then
+        assertThat(count).isGreaterThan(0)
+        val target = dao.getById(dummyId)
+        assertThat(target.title).isEqualTo("title2")
+        assertThat(target.content).isEqualTo("content2")
+    }
+
     @After
     fun tearDown() {
         db.close()

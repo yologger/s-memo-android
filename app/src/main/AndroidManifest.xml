@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SMemo">
         <activity
+            android:name=".ui.screen.detail.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.screen.create.CreateActivity"
             android:exported="true" />
         <activity

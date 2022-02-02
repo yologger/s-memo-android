@@ -11,7 +11,7 @@ class MemoRepository (
     }
 
     suspend fun getAllMemos(): List<MemoDto> {
-        return memoDao.getAll().map { MemoDto(title = it.title, content = it.content) }
+        return memoDao.getAll().map { MemoDto(id = it.id, title = it.title, content = it.content) }
     }
 
     suspend fun deleteAllMemos() {
@@ -20,5 +20,10 @@ class MemoRepository (
 
     suspend fun getMemoById(id: Long): MemoDto {
         return memoDao.getById(id).toDto()
+    }
+
+    suspend fun updateMemo(memoDto: MemoDto): MemoDto {
+        memoDao.update(memoDto.toEntity())
+        return memoDao.getById(memoDto.id).toDto()
     }
 }

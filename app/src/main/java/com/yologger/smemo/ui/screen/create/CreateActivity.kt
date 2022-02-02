@@ -1,5 +1,7 @@
 package com.yologger.smemo.ui.screen.create
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
@@ -26,12 +28,14 @@ class CreateActivity : BaseActivity() {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
-        viewModel.state.observe(this) {
+        viewModel.event.observe(this) {
             when(it) {
-                CreateViewModel.State.IDLE -> { }
-                CreateViewModel.State.INPUTS_EMPTY_ERROR -> showToast("Inputs can't be empty.")
-                CreateViewModel.State.ON_MEMO_SAVED -> {
+                is CreateViewModel.Event.INPUTS_EMPTY_ERROR -> showToast("Inputs can't be empty.")
+                is CreateViewModel.Event.ON_MEMO_SAVED -> {
                     showToast("Memo added.")
+                    val intent = Intent()
+                    intent.putExtra("id", it.id)
+                    setResult(Activity.RESULT_OK, intent)
                     finish()
                 }
             }

@@ -15,5 +15,6 @@ interface MemoDao {
     @Query("SELECT * FROM MemoEntity WHERE id = :id")
     suspend fun getById(id: Long): MemoEntity
 
-
+    @Query("DELETE FROM MemoEntity")
+    suspend fun deleteAll()
 }

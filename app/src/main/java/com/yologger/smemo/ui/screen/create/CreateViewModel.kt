@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.yologger.smemo.data.repository.MemoRepository
 import com.yologger.smemo.ui.dto.MemoDto
+import com.yologger.smemo.ui.util.SingleLiveEvent
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -15,7 +16,7 @@ class CreateViewModel(
     private val coroutineDispatcher: CoroutineDispatcher
 ) : ViewModel() {
 
-    var state: MutableLiveData<State> = MutableLiveData(State.IDLE)
+    val event: SingleLiveEvent<Event> = SingleLiveEvent()
 
     val liveTitle = MutableLiveData("")
     val liveContent = MutableLiveData("")
@@ -27,20 +28,19 @@ class CreateViewModel(
     private fun createMemo() {
         val memoDto = MemoDto(title = liveTitle.value!!, content = liveContent.value!!)
         viewModelScope.launch(coroutineDispatcher) {
-            memoRepository.createMemo(memoDto = memoDto)
+            val id = memoRepository.createMemo(memoDto = memoDto)
             withContext(Dispatchers.Main) {
-                state.value = State.ON_MEMO_SAVED
+                event.value = Event.ON_MEMO_SAVED(id)
             }
         }
     }
 
     private fun showErrorMessage() {
-        state.value = State.INPUTS_EMPTY_ERROR
+        event.value = Event.INPUTS_EMPTY_ERROR
     }
 
-    enum class State {
-        IDLE,
-        ON_MEMO_SAVED,
-        INPUTS_EMPTY_ERROR
+    sealed class Event {
+        data class ON_MEMO_SAVED(val id: Long): Event()
+        object INPUTS_EMPTY_ERROR: Event()
     }
 }

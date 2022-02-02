@@ -65,4 +65,20 @@ class MemoRepositoryTest {
         // Then
         assertThat(result.size).isEqualTo(4)
     }
+
+    @Test
+    fun getMemoById() = runBlocking {
+        // Given
+        val dummyId = 1L
+        val dummyTitle = "title1"
+        val dummyContent = "content1"
+        `when`(mockMemoDao.getById(1)).thenReturn(MemoEntity(1, dummyTitle,  dummyContent))
+
+        // When
+        val result = memoRepository.getMemoById(dummyId)
+
+        // Then
+        assertThat(result.title).isEqualTo(dummyTitle)
+        assertThat(result.content).isEqualTo(dummyContent)
+    }
 }

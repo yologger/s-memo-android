@@ -3,6 +3,7 @@ package com.yologger.smemo.ui.dto
 import com.yologger.smemo.data.entity.MemoEntity
 
 data class MemoDto(
+    val id: Long = 0,
     val title: String,
     val content: String
 ) {

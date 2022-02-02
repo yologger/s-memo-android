@@ -6,7 +6,7 @@
     <string name="activity_main_bottom_navigation_view_settings">설정</string>
 
     <!-- fragment_home -->
-    <string name="fragment_home_sdv_delete">삭제</string>
+    <string name="fragment_home_sdv_delete">모두 삭제</string>
     <string name="fragment_home_sdv_reorder">정렬</string>
     <string name="fragment_home_sdv_new_post">글쓰기</string>
 

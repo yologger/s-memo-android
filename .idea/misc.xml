@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3625" />
+        <entry key="app/src/main/res/drawable/icon_more_vertical_filled_black_24.xml" value="0.1745" />
         <entry key="app/src/main/res/drawable/icon_settings_filled_black_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/icon_settings_outlined_black_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/selector_home_balck_24.xml" value="0.3416666666666667" />
@@ -13,7 +14,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/activity_main_menu_bottom_navigation_view.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_home_item.xml" value="0.33796296296296297" />
+        <entry key="app/src/main/res/layout/fragment_home_item.xml" value="0.1921875" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/fragment_settings_item.xml" value="0.5484375" />
         <entry key="app/src/main/res/menu/activity_create_menu_toolbar.xml" value="0.3265625" />

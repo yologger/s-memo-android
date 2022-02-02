@@ -56,14 +56,15 @@ class CreateViewModelTest {
         createViewModel.onSave()
 
         // Then
-        assertThat(createViewModel.state.getOrAwaitValue()).isEqualTo(CreateViewModel.State.INPUTS_EMPTY_ERROR)
+        assertThat(createViewModel.event.getOrAwaitValue()).isEqualTo(CreateViewModel.Event.INPUTS_EMPTY_ERROR)
     }
 
     @Test
     @ExperimentalCoroutinesApi
     fun whenValidInputs() = runBlockingTest {
         // Given
-        `when`(fakeMemoRepository.createMemo(MockitoHelper.anyObject())).thenReturn(1)
+        val dummyMemoId = 1L
+        `when`(fakeMemoRepository.createMemo(MockitoHelper.anyObject())).thenReturn(dummyMemoId)
 
         val createViewModel = CreateViewModel(fakeMemoRepository, TestCoroutineDispatcher())
 
@@ -74,6 +75,6 @@ class CreateViewModelTest {
         createViewModel.onSave()
 
         // Then
-        assertThat(createViewModel.state.getOrAwaitValue()).isEqualTo(CreateViewModel.State.ON_MEMO_SAVED)
+        assertThat(createViewModel.event.getOrAwaitValue()).isEqualTo(CreateViewModel.Event.ON_MEMO_SAVED(dummyMemoId))
     }
 }

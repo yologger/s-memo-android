@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.orhanobut.logger.Logger
 import com.yologger.smemo.R
 import com.yologger.smemo.ui.dto.MemoDto
 
@@ -31,5 +32,10 @@ class MemosAdapter(
     fun updateAll(newMemos: List<MemoDto>) {
         memos = newMemos.toMutableList()
         notifyDataSetChanged()
+    }
+
+    fun addLast(newMemo: MemoDto) {
+        memos.add(newMemo)
+        notifyItemInserted(memos.size + 1)
     }
 }

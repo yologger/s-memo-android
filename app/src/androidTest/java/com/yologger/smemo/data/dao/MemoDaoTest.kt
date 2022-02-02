@@ -54,6 +54,22 @@ class MemoDaoTest {
         assertThat(memoList.size).isEqualTo(4)
     }
 
+    @Test
+    fun deleteAll() = runBlocking {
+        // Given
+        dao.insert(MemoEntity(title = "title1", content = "content1"))
+        dao.insert(MemoEntity(title = "title2", content = "content2"))
+        dao.insert(MemoEntity(title = "title3", content = "content3"))
+        dao.insert(MemoEntity(title = "title4", content = "content4"))
+
+        // When
+        dao.deleteAll()
+        val memoList = dao.getAll()
+
+        // Then
+        assertThat(memoList.size).isEqualTo(0)
+    }
+
     @After
     fun tearDown() {
         db.close()

@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4275" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3625" />
+        <entry key="app/src/main/res/drawable/icon_launcher_background.xml" value="0.4275" />
         <entry key="app/src/main/res/drawable/icon_more_vertical_filled_black_24.xml" value="0.1745" />
         <entry key="app/src/main/res/drawable/icon_settings_filled_black_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/icon_settings_outlined_black_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/selector_home_balck_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/selector_home_black_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/selector_settings_black_24.xml" value="0.3416666666666667" />
+        <entry key="app/src/main/res/drawable/smemo_icon_launcher_background.xml" value="0.4275" />
         <entry key="app/src/main/res/layout/activity_create.xml" value="0.5484375" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.1542056074766355" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3255208333333333" />
@@ -25,6 +28,7 @@
         <entry key="app/src/main/res/menu/activity_main_menu_bottom_navigation_view.xml" value="0.5484375" />
         <entry key="app/src/main/res/menu/activity_main_menu_botton_navigation_view.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/menu/activity_main_menu_option.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/launcher_icon.xml" value="0.342" />
       </map>
     </option>
   </component>

@@ -18,13 +18,16 @@
             android:id="@+id/activity_create_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="?attr/actionBarSize" />
+            style="@style/Base_ToolbarStyle"
+            android:minHeight="?attr/actionBarSize"/>
 
         <EditText
             android:id="@+id/activity_create_tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
+            android:padding="@dimen/padding_md"
+            android:hint="@string/activity_create_et_title"
             android:text="@={viewModel.liveTitle}"
             android:maxLines="1" />
 
@@ -33,6 +36,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:padding="@dimen/padding_md"
+            android:hint="@string/activity_create_et_content"
             android:text="@={viewModel.liveContent}"
             android:gravity="top" />
 

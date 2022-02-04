@@ -12,8 +12,7 @@ class SettingsAdapter(
 ): RecyclerView.Adapter<SettingsAdapter.SettingsViewHolder>() {
 
     private val menus = listOf(
-        "Theme",
-        "Recycle Bin",
+        "Theme"
     )
 
     inner class SettingsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

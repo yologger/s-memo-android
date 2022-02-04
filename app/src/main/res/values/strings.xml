@@ -12,10 +12,16 @@
 
     <!-- activity_create -->
     <string name="activity_create_tb_save">SAVE</string>
+    <string name="activity_create_tb_title">New memo</string>
+    <string name="activity_create_et_title">Title</string>
+    <string name="activity_create_et_content">Content</string>
 
     <!-- activity_setting -->
     <string name="fragment_setting_tv_theme">Dark Theme</string>
     <string name="fragment_setting_feature1">New Features</string>
     <string name="fragment_setting_feature2">Coming Soon.</string>
+
+    <!-- activity_theme -->
+    <string name="activity_theme_tb_title">Set theme</string>
 
 </resources>

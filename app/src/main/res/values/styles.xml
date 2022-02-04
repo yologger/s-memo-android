@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Toolbar Style -->
+    <style name="Base_ToolbarStyle">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:background">@color/ToolbarBackground</item>
+        <item name="android:theme">@style/Base_ToolbarTheme</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleTextAppearance</item>
+        <item name="subtitleTextAppearance">@style/ToolbarSubTitleTextAppearance</item>
+        <item name="elevation">4dp</item>
+    </style>
+    <style name="Base_ToolbarTheme">
+        <item name="android:textColorPrimary">@color/ToolbarTitleTextColor</item>
+        <item name="android:textColorSecondary">@color/ToolbarTitleTextColor</item>
+    </style>
+    <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/ToolbarTitleTextColor</item>
+    </style>
+    <style name="ToolbarSubTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textColor">@color/ToolbarTitleTextColor</item>
+    </style>
+</resources>

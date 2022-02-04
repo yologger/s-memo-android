@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">S Memo</string>
+    <string name="app_name">S 메모</string>
 
     <!-- activity_main -->
     <string name="activity_main_bottom_navigation_view_home">홈</string>
@@ -12,9 +12,15 @@
 
     <!-- activity_create -->
     <string name="activity_create_tb_save">저장</string>
+    <string name="activity_create_tb_title">새로운 메모</string>
+    <string name="activity_create_et_title">제목</string>
+    <string name="activity_create_et_content">내용</string>
 
     <!-- activity_setting -->
     <string name="fragment_setting_tv_theme">다크 테마</string>
     <string name="fragment_setting_feature1">새로운 기능이</string>
     <string name="fragment_setting_feature2">곧 출시됩니다.</string>
+
+    <!-- activity_theme -->
+    <string name="activity_theme_tb_title">테마 설정</string>
 </resources>

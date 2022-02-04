@@ -18,9 +18,8 @@
             android:id="@+id/activity_detail_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme" />
+            style="@style/Base_ToolbarStyle"/>
 
         <EditText
             android:id="@+id/activity_detail_tv_title"
@@ -28,6 +27,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:text="@={viewModel.liveTitle}"
+            android:padding="@dimen/padding_md"
             android:maxLines="1" />
 
         <EditText
@@ -36,6 +36,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@={viewModel.liveContent}"
+            android:padding="@dimen/padding_md"
             android:gravity="top" />
 
     </LinearLayout>

@@ -2,6 +2,7 @@ package com.yologger.smemo.ui.screen.main.settings.theme
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.orhanobut.logger.Logger
@@ -12,11 +13,13 @@ class ThemeActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var recyclerViewAdapter: ThemeRVAdapter
+    private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_theme)
         initRecyclerView()
+        initToolbar()
     }
 
     private fun initRecyclerView() {
@@ -31,5 +34,12 @@ class ThemeActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = layoutManager
+    }
+
+    private fun initToolbar() {
+        toolbar = findViewById(R.id.activity_theme_tb)
+        toolbar.setNavigationIcon(R.drawable.icon_arrow_back_filled_black_24)
+        toolbar.setNavigationOnClickListener { finish() }
+        toolbar.title = getString(R.string.activity_theme_tb_title)
     }
 }

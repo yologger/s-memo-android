@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Light">
         <activity
+            android:name=".ui.screen.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.screen.main.settings.theme.ThemeActivity"
             android:exported="false" />
         <activity
@@ -21,12 +30,7 @@
             android:exported="true" />
         <activity
             android:name=".ui.screen.main.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

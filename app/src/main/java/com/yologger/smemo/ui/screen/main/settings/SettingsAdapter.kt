@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.yologger.smemo.R
 
-class SettingsAdapter(
+class SettingsAdapter (
     private val onItemClickListener: (Int) -> Unit
 ): RecyclerView.Adapter<SettingsAdapter.SettingsViewHolder>() {
 

@@ -9,11 +9,13 @@
         <entry key="app/src/main/res/drawable/icon_more_vertical_filled_black_24.xml" value="0.1745" />
         <entry key="app/src/main/res/drawable/icon_settings_filled_black_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/icon_settings_outlined_black_24.xml" value="0.3416666666666667" />
+        <entry key="app/src/main/res/drawable/logo.xml" value="0.1095" />
         <entry key="app/src/main/res/drawable/selector_home_balck_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/selector_home_black_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/selector_settings_black_24.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/drawable/smemo_icon_launcher_background.xml" value="0.4275" />
         <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.382" />
+        <entry key="app/src/main/res/drawable/splash_screen_dark.xml" value="0.1095" />
         <entry key="app/src/main/res/layout/activity_create.xml" value="0.5484375" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.1542056074766355" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3255208333333333" />

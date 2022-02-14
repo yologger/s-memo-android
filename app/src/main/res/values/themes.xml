@@ -1,22 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowBackground">@drawable/splash_screen_light</item>
     </style>
 
-    <style name="AppTheme.Light" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/Primary</item>
         <item name="colorPrimaryVariant">@color/PrimaryVariant</item>
         <item name="colorOnPrimary">@color/OnPrimary</item>
         <item name="colorSecondary">@color/Secondary</item>
         <item name="colorSecondaryVariant">@color/SecondaryVariant</item>
         <item name="colorOnSecondary">@color/OnSecondary</item>
-        <!--        <item name="android:colorBackground">@color/light.colorBackground</item>-->
-        <!--        <item name="colorOnBackground">@color/light.colorOnBackground</item>-->
-        <!--        <item name="colorSurface">@color/light.colorSurface</item>-->
-        <!--        <item name="colorOnSurface">@color/light.colorOnSurface</item>-->
-        <!--        <item name="colorError">@color/light.colorError</item>-->
-        <!--        <item name="colorOnError">@color/light.colorOnError</item>-->
         <item name="android:statusBarColor" tools:targetApi="l">@color/StatusBarBackground</item>
     </style>
 </resources>

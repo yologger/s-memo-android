@@ -32,9 +32,9 @@ class DetailActivity : BaseActivity() {
 
         viewModel.event.observe(this) {
             when(it) {
-                is DetailViewModel.Event.INPUTS_EMPTY_ERROR -> showToast("Inputs can't be empty.")
+                is DetailViewModel.Event.INPUTS_EMPTY_ERROR -> showToast(getString(R.string.activity_detail_toast_error))
                 is DetailViewModel.Event.ON_MEMO_UPDATED -> {
-                    showToast("Updated.")
+                    showToast(getString(R.string.activity_detail_toast_success))
                     val intent = Intent()
                     intent.putExtra("updated_memo", it.memoDto)
                     setResult(Activity.RESULT_OK, intent)
@@ -47,7 +47,6 @@ class DetailActivity : BaseActivity() {
     private fun initToolbar() {
         toolbar = findViewById(R.id.activity_detail_tb)
         toolbar.setNavigationIcon(R.drawable.icon_close_filled_black_24)
-
         toolbar.setNavigationOnClickListener { finish() }
         toolbar.inflateMenu(R.menu.activity_detail_menu_toolbar)
         toolbar.setOnMenuItemClickListener {

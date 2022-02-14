@@ -4,6 +4,6 @@
 
     <item
         android:id="@+id/activity_detail_tb_save"
-        android:title="@string/activity_create_tb_save"
+        android:title="@string/activity_detail_tb_update"
         app:showAsAction="always" />
 </menu>

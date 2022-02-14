@@ -40,6 +40,7 @@
     <!--    <color name="ColorOnSurface">@color/color.white</color>-->
     <!--    <color name="ColorError">@color/color.white</color>-->
     <!--    <color name="ColorOnError">@color/color.white</color>-->
+    <color name="warning">#FF2181</color>
 
     <color name="itemCheckedColor">@color/Yellow.light</color>
     <color name="StatusBarBackground">@color/DarkGrey</color>

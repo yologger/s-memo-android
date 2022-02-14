@@ -106,9 +106,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun showAlertDialog(message: String) = AlertDialog.Builder(requireContext())
-        .setMessage("Delete all?")
-        .setPositiveButton("OK") { _, _ -> viewModel.deleteAllMemos() }
-        .setNegativeButton("Cancel") { _, _ -> }
+        .setMessage(getString(R.string.fragment_home_ad_text))
+        .setPositiveButton(getString(R.string.fragment_home_ad_delete)) { _, _ -> viewModel.deleteAllMemos() }
+        .setNegativeButton(getString(R.string.fragment_home_ad_cancel)) { _, _ -> }
         .create()
         .show()
 

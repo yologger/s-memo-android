@@ -29,9 +29,9 @@ class CreateActivity : BaseActivity() {
 
         viewModel.event.observe(this) {
             when(it) {
-                is CreateViewModel.Event.INPUTS_EMPTY_ERROR -> showToast("Inputs can't be empty.")
+                is CreateViewModel.Event.INPUTS_EMPTY_ERROR -> showToast(getString(R.string.activity_create_toast_error))
                 is CreateViewModel.Event.ON_MEMO_SAVED -> {
-                    showToast("Memo added.")
+                    showToast(getString(R.string.activity_create_toast_success))
                     val intent = Intent()
                     intent.putExtra("id", it.id)
                     setResult(Activity.RESULT_OK, intent)
@@ -43,6 +43,7 @@ class CreateActivity : BaseActivity() {
 
     private fun initToolbar() {
         toolbar = findViewById(R.id.activity_create_tb)
+        toolbar.title = getString(R.string.activity_create_tb_title)
         toolbar.setNavigationIcon(R.drawable.icon_close_filled_black_24)
         toolbar.setNavigationOnClickListener { finish() }
         toolbar.inflateMenu(R.menu.activity_create_menu_toolbar)

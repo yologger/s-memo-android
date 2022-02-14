@@ -3,6 +3,9 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdk 31
 
@@ -11,7 +14,7 @@ android {
         minSdk 21
         targetSdk 31
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -28,6 +31,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
     }
 }
 
@@ -48,24 +57,63 @@ dependencies {
     // Legacy Support v4
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    // JUnit
-    testImplementation "junit:junit:${junit_version}"
-
-    // AndroidX Test Junit
-    androidTestImplementation "androidx.test.ext:junit:${androidx_test_junit}"
-
-    // AndroidX Test Espresso
-    androidTestImplementation "androidx.test.espresso:espresso-core:${androidx_test_expresso}"
-
     // Koin Core features
     implementation "io.insert-koin:koin-core:$koin_version"
 
     // Koin Test features
     testImplementation "io.insert-koin:koin-test:$koin_version"
 
-    // Koin for JUnit 5
-    testImplementation "io.insert-koin:koin-test-junit5:$koin_version"
-
     // Koin main features for Android
     implementation "io.insert-koin:koin-android:$koin_version"
+
+    // Speed Dial
+    implementation "com.leinardi.android:speed-dial:${speed_dial_version}"
+
+    // JUnit
+    testImplementation "junit:junit:${junit_version}"
+
+    // Androidx Test - Junit extension
+    androidTestImplementation "androidx.test.ext:junit:${androidx_test_junit_extension_version}"
+
+    // Androidx Test - Espresso
+    androidTestImplementation "androidx.test.espresso:espresso-core:${androidx_test_expresso_version}"
+
+    // Androidx Test - Core testing
+    testImplementation "androidx.arch.core:core-testing:${androidx_test_core_testing_version}"
+
+    // Androidx Test - Core KTX
+    androidTestImplementation "androidx.test:core-ktx:$androidx_test_core_ktx"
+
+    // Androidx Test - Fragment Testing
+    androidTestImplementation "androidx.fragment:fragment-testing:$androidx_test_fragment_version"
+
+    // Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutine_version}"
+
+    // Coroutine Test
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutine_test_version}"
+
+    // KTX - Lifecycle ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+
+    // Logger
+    implementation "com.orhanobut:logger:${logger_version}"
+
+    // Room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // KTX - Room
+    implementation "androidx.room:room-ktx:2.4.1"
+
+    // Room Test
+    androidTestImplementation "androidx.room:room-testing:$room_version"
+
+    // Mockito
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "org.mockito:mockito-inline:$mockito_version"
+
+    // Truth
+    testImplementation "com.google.truth:truth:$truth_version"
+    androidTestImplementation "androidx.test.ext:truth:$androidx_test_truth_extension_version"
 }

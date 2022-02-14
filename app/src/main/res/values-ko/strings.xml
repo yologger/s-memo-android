@@ -1,6 +1,39 @@
 <resources>
-    <string name="app_name">S Memo</string>
+    <string name="app_name">S 메모</string>
 
+    <!-- activity_main -->
     <string name="activity_main_bottom_navigation_view_home">홈</string>
     <string name="activity_main_bottom_navigation_view_settings">설정</string>
+
+    <!-- fragment_home -->
+    <string name="fragment_home_sdv_delete">모두 삭제</string>
+    <string name="fragment_home_sdv_reorder">정렬</string>
+    <string name="fragment_home_sdv_new_post">글쓰기</string>
+    <string name="fragment_home_ad_text">모두 삭제하시겠어요?</string>
+    <string name="fragment_home_ad_delete">삭제</string>
+    <string name="fragment_home_ad_cancel">취소</string>
+
+    <!-- activity_create -->
+    <string name="activity_create_tb_save">저장</string>
+    <string name="activity_create_tb_title">새 메모</string>
+    <string name="activity_create_et_title">제목</string>
+    <string name="activity_create_et_content">내용</string>
+    <string name="activity_create_toast_error">입력란이 비어있습니다.</string>
+    <string name="activity_create_toast_success">추가되었습니다.</string>
+
+    <!-- activity_main_menu_option -->
+    <string name="activity_main_menu_option_delete">삭제</string>
+
+    <!-- activity_detail -->
+    <string name="activity_detail_tb_update">수정</string>
+    <string name="activity_detail_toast_error">입력란이 비어있습니다.</string>
+    <string name="activity_detail_toast_success">수정되었습니다.</string>
+
+    <!-- activity_setting -->
+    <string name="fragment_setting_tv_theme">다크 테마</string>
+    <string name="fragment_setting_feature1">새로운 기능이</string>
+    <string name="fragment_setting_feature2">곧 출시됩니다.</string>
+
+    <!-- activity_theme -->
+    <string name="activity_theme_tb_title">테마 설정</string>
 </resources>

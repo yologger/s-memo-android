@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yologger.smemo.ui.screen.detail.DetailViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.screen.detail.DetailActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_detail_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            style="@style/Base_ToolbarStyle"/>
+
+        <EditText
+            android:id="@+id/activity_detail_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="@={viewModel.liveTitle}"
+            android:padding="@dimen/padding_md"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/activity_detail_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@={viewModel.liveContent}"
+            android:padding="@dimen/padding_md"
+            android:gravity="top" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,6 +1,40 @@
 <resources>
     <string name="app_name">S Memo</string>
 
+    <!-- activity_main -->
     <string name="activity_main_bottom_navigation_view_home">Home</string>
     <string name="activity_main_bottom_navigation_view_settings">Settings</string>
+
+    <!-- fragment_home -->
+    <string name="fragment_home_sdv_delete">DELETE ALL</string>
+    <string name="fragment_home_sdv_reorder">REORDER</string>
+    <string name="fragment_home_sdv_new_post">NEW POST</string>
+    <string name="fragment_home_ad_text">Delete All?</string>
+    <string name="fragment_home_ad_delete">DELETE</string>
+    <string name="fragment_home_ad_cancel">CANCEL</string>
+
+    <!-- activity_create -->
+    <string name="activity_create_tb_save">SAVE</string>
+    <string name="activity_create_tb_title">New Memo</string>
+    <string name="activity_create_et_title">Title</string>
+    <string name="activity_create_et_content">Content</string>
+    <string name="activity_create_toast_error">Inputs can\'t be empty.</string>
+    <string name="activity_create_toast_success">Added.</string>
+
+    <!-- activity_main_menu_option -->
+    <string name="activity_main_menu_option_delete">DELETE</string>
+
+    <!-- activity_detail -->
+    <string name="activity_detail_tb_update">Update</string>
+    <string name="activity_detail_toast_error">Inputs can\'t be empty.</string>
+    <string name="activity_detail_toast_success">Updated</string>
+
+    <!-- activity_setting -->
+    <string name="fragment_setting_tv_theme">Dark Theme</string>
+    <string name="fragment_setting_feature1">New Features</string>
+    <string name="fragment_setting_feature2">Coming Soon.</string>
+
+    <!-- activity_theme -->
+    <string name="activity_theme_tb_title">Set theme</string>
+
 </resources>

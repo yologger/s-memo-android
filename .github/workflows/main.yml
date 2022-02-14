@@ -78,3 +78,4 @@ jobs:
         track: production
         packageName: com.yologger.smemo
         releaseFiles: app/build/outputs/bundle/release/app-release.aab
+        status: completed

@@ -11,22 +11,12 @@
 
 [iOS](https://github.com/yologger/simple_memo_ios)와 [Flutter](https://github.com/yologger/simple-memo-flutter)로 구현한 `S Memo` 코드도 확인할 수 있습니다.
 
-## Feature
-- 게시글 작성
-- 게시글 순서 변경
-- 게시글 삭제
-- 다크 모드
-- 다국어 지원
-
 ## Dependency
 * Kotlin
-* ACC 
+* Coroutine
+* ACC
   - Data Binding
   - ViewModel
   - LiveData
-* Kotlin Coroutine
 * Room
-* [Speed Dial](https://github.com/leinardi/FloatingActionButtonSpeedDial)
-
-## Infra/DevOps
-- `GitHub Actions`, `Google Play Console`를 통한 CI/CD pipeline 구축
+* Speed Dial
